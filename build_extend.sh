@@ -7,12 +7,14 @@ apk update && apk upgrade \
 libaio-dev \
 zlib-dev \
 pcre-dev \
+php7.1-session\
+php7.1-json\
+php7.1-iconv\
+php7.1-mysqli\
+php7.1-posix\
 php7.1-dev \
 php7.1-pecl\
-git\
-wget\
-vim\
-curl
+
 
 ln -s /usr/bin/php-config7.1 /usr/bin/php-config \
 && ln -s /usr/bin/phpize7.1 /usr/bin/phpize \
