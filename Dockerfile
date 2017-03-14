@@ -17,4 +17,6 @@ RUN sh /root/build_extend.sh
 
 ADD php.ini /etc/php7.1/
 
+ADD ext/* /etc/php7.1/conf.d/
+
 RUN php -m

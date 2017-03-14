@@ -2,11 +2,23 @@
 #echo "http://nl.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories
 #echo "nameserver 8.8.8.8" >> /etc/resolv.conf 
 
-apk update && apk upgrade \
-&& apk add autoconf build-base linux-headers git wget curl svn libaio-dev zlib-dev pcre-dev
+apk update && apk upgrade
 
-apk add php7.1-session php7.1-json php7.1-iconv php7.1-mysqli php7.1-posix php7.1-dev php7.1-pecl
+apk add php7.1-opcache \
+php7.1-session \
+php7.1-json \
+php7.1-iconv \
+php7.1-mysqli \
+php7.1-posix
 
+
+
+apk add autoconf build-base linux-headers \
+libaio-dev \
+zlib-dev \
+pcre-dev \
+php7.1-dev \
+php7.1-pecl
 
 ln -s /usr/bin/php-config7.1 /usr/bin/php-config \
 && ln -s /usr/bin/phpize7.1 /usr/bin/phpize \
