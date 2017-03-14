@@ -3,17 +3,9 @@
 #echo "nameserver 8.8.8.8" >> /etc/resolv.conf 
 
 apk update && apk upgrade \
-&& apk add autoconf build-base linux-headers git wget curl svn\
-libaio-dev \
-zlib-dev \
-pcre-dev \
-php7.1-session\
-php7.1-json\
-php7.1-iconv\
-php7.1-mysqli\
-php7.1-posix\
-php7.1-dev \
-php7.1-pecl\
+&& apk add autoconf build-base linux-headers git wget curl svn libaio-dev zlib-dev pcre-dev
+
+apk add php7.1-session php7.1-json php7.1-iconv php7.1-mysqli php7.1-posix php7.1-dev php7.1-pecl
 
 
 ln -s /usr/bin/php-config7.1 /usr/bin/php-config \
@@ -23,11 +15,11 @@ ln -s /usr/bin/php-config7.1 /usr/bin/php-config \
 #&& sed -i "s/union {void (*sa_handler)(int)/__sighandler_t sa_handler/g" /usr/include/signal.h \
 #&& sed -i "s/ -n / /" `which pecl` \
 pecl install swoole \
-&& pecl install yaf \
 && pecl install yaconf \
 && pecl install channel://pecl.php.net/yac-2.0.1 \
-&& pecl install redis \
 && pecl install xdebug \
 && pecl install ds \
 && pecl install inotify \
-&& pecl install msgpack
+&& pecl install msgpack \
+&& pecl install yaf \
+&& pecl install redis
