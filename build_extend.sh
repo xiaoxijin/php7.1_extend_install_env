@@ -12,13 +12,13 @@ php7.1-mysqli \
 php7.1-posix
 
 
-
 apk add autoconf build-base linux-headers \
 libaio-dev \
 zlib-dev \
 pcre-dev \
 php7.1-dev \
 php7.1-pecl
+
 
 ln -s /usr/bin/php-config7.1 /usr/bin/php-config \
 && ln -s /usr/bin/phpize7.1 /usr/bin/phpize \
