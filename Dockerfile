@@ -9,5 +9,5 @@ RUN sh /root/build_extend.sh
 
 
 ENTRYPOINT ["/bin/sh"]
-CMD [""]
+CMD ["~"]
 
