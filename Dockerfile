@@ -8,6 +8,6 @@ ADD build_extend.sh /root/
 RUN sh /root/build_extend.sh
 
 
-ENTRYPOINT ["/bash/sh"]
-CMD ["ls"]
+ENTRYPOINT ["/bin/sh","ls"]
+CMD ["-lat"]
 
