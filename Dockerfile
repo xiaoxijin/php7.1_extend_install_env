@@ -9,5 +9,4 @@ ADD entrypoint.sh /work/
 RUN sh /work/build_extend.sh
 
 
-ENTRYPOINT ["/work/entrypoint.sh"]
-CMD ["install"]
+ENTRYPOINT ["/bin/sh"]
