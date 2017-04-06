@@ -2,12 +2,12 @@ FROM registry.cn-shenzhen.aliyuncs.com/xiaoxijin/pcm_local:latest
 
 Maintainer Xijin Xiao (http://github.com/xiaoxijin/)
 
-ADD composer-setup.php /root/
-ADD build_extend.sh /root/
+ADD composer-setup.php /work/
+ADD build_extend.sh /work/
+ADD entrypoint.sh /work/
 
-RUN sh /root/build_extend.sh
+RUN sh /work/build_extend.sh
 
 
-ENTRYPOINT ["/bin/sh"]
-CMD ["~"]
-
+ENTRYPOINT ["/work/entrypoint.sh"]
+CMD ["install"]
