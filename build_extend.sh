@@ -1,3 +1,4 @@
+apk update && apk upgrade
 cd /root/
 apk add autoconf build-base linux-headers \
 libaio-dev \
