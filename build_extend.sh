@@ -3,7 +3,8 @@ libaio-dev \
 zlib-dev \
 pcre-dev \
 php7-dev \
-php7-pecl
+php7-pecl \
+git
 
 mkdir -p /work
 chmod 777 -R /work
